@@ -8,7 +8,9 @@ class App extends React.Component {
   	};
 
 	onChangeHandle(event) {
-    	this.setState({ searchText: event.target.value});
+    	this.setState({ 
+			searchText: event.target.value
+		});
  	};
 
 	onSubmit(event) {
@@ -40,11 +42,15 @@ class App extends React.Component {
 
 class UsersList extends React.Component {
 	get users() {
-    	return this.props.users.map(user => <User key={user.id} user={user}/>);
-	}
+		return 
+			this.props.users.map(user => <User key={user.id} user={user}/>);
+	};
 
 	render() {
-    	return <div>{this.users}</div>;
+		return 
+			<div>
+				{this.users}
+			</div>;
 	};
 };
 
